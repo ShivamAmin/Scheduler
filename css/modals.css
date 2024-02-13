@@ -1,0 +1,323 @@
+/*Modals Template */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    text-align: center;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0 0 20px 0;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: grey;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-body p {
+    font-size: 1.2em;
+}
+
+/* Dropdown Input */
+
+select {
+    /* styling */
+    background-color: white;
+    border: thin solid grey;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.2em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+    /* reset */
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select.minimal {
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+    margin-bottom: 20px;
+    background-size: 5px 5px,
+    5px 5px,
+    1px 1.5em;
+    background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+    background-image: linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+    background-position: calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+    background-size: 5px 5px,
+    5px 5px,
+    1px 1.5em;
+    background-repeat: no-repeat;
+    border-color: green;
+    outline: 0;
+}
+
+/*Contact Form */
+#contact-form {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+#contact-form p {
+    font-size: 25px;
+}
+
+label {
+    font-weight: 400;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+textarea,
+.cntIn {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    text-align: center;
+    background: none;
+    font-weight: 700;
+    font-family: 'Lato', georgia;
+    font-size: 25px;
+    /*color: rgba(255, 255, 255, 1);*/
+    color: black;
+    max-width: 90%;
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    cursor: text;
+}
+
+textarea {
+    text-align: left;
+    overflow: hidden;
+    resize: none;
+    width: 90%;
+    /*border-color: rgba(255, 255, 255, 0);*/
+    border-color: black;
+}
+
+textarea:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    /*border: 2px dashed rgba(255, 255, 255, 1);*/
+    border: 2px solid black;
+}
+
+textarea:focus:required:valid {
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+textarea:required:valid {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cntIn {
+    border-bottom: 2px solid black;
+    width: auto;
+}
+
+.cntIn:required,
+textarea:required {
+    border-bottom: 2px solid black;
+}
+
+cntIn:focus {
+    border-bottom: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cntIn:required:valid {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.cntIn:required:invalid {
+    color: black;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
+}
+
+:-ms-input-placeholder {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.expanding {
+    vertical-align: top;
+}
+
+.send-icn {
+    fill: rgba(0, 0, 0, 1);
+}
+
+.send-icn:hover {
+    fill: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+/*button {*/
+/*background: none;*/
+/*border: none;*/
+/*outline: none;*/
+/*margin: 2vmax;*/
+/*}*/
+
+button:hover small {
+    opacity: 1;
+}
+
+small {
+    display: block;
+    opacity: 0;
+}
+
+/* Search Input */
+.searchCRN {
+    font-size: 1.2em;
+    width: 160px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.searchCRN:focus {
+    width: 100%;
+}
+
+/* Flat Minimal Buttons */
+.flat_btn {
+    color: black;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 40px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 20px;
+    border-top: 2px solid #000000;
+}
+
+.flat_btn:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: #000000;
+    left: 45%;
+    height: 2px;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.7;
+}
+
+.flat_btn:hover:before {
+    width: 100%;
+    left: 0;
+}
